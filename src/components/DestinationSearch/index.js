@@ -14,7 +14,7 @@ class DestinationSearch extends Component {
     const {destinationsList} = this.props
     const {searchInput} = this.state
     const searchedResults = destinationsList.filter(eachItem =>
-      eachItem.name.includes(searchInput),
+      eachItem.name.toLowerCase().includes(searchInput.toLowerCase()),
     )
     return (
       <div className="app-container ">
@@ -36,7 +36,7 @@ class DestinationSearch extends Component {
           </div>
           <ul className="items-container">
             {searchedResults.map(eachList => (
-              <DestinationItem itemDetails={eachList} />
+              <DestinationItem itemDetails={eachList} key={eachList.id}/>
             ))}
           </ul>
         </div>
