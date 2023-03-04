@@ -7,8 +7,8 @@ const DestinationItem = props => {
 
   return (
     <li className="list-container">
-      <img className="image" src={imgUrl} alt="img" />
-      <h1 className="heading">{name}</h1>
+      <img className="image" src={imgUrl} alt={name} />
+      <p className="heading">{name}</p>
     </li>
   )
 }
